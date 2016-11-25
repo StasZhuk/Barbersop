@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8">
+      <title>Barbershop</title>
+      <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="inner-page static">
+      <header class="main-header">
+        <div class="container clearfix">
+          <nav class="main-navigation">
+            <a class="logo-inner" href="index.html"><img src="img/logo-inner.png" alt="Барбершоп Бородинский" width="111" height="22"></a>
+            <ul>
+              <li>
+                <a href="#">Информация</a>
+              </li>
+              <li>
+                <a href="#">Новости</a>
+              </li>
+              <li>
+                <a href="text.html">Прайс-лист</a>
+              </li>
+              <li>
+                <a href="barbershop-shop.html">Магазин</a>
+              </li>
+              <li class="active">
+                <span>Контакты</span>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-logblock">
+            <a href="#" class="login">Вход</a>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <div class="inner-page-title">
+          <h1 class="text-title">Контакты</h1>
+          <ul class="breadcrumbs">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="curent">Как проехать
+            </li>
+          </ul>
+        </div>
+        <div class="inner-content">
+          <p></p>
+          <p><img src="img/modal-map.jpg" width="" height="" alt="карта проезда"></p>
+        </div>
+      </main>
+      <footer class="main-footer">
+        <div class="container clearfix">
+          <section class="footer-contacts">
+            <p>
+              Барбершоп «Бородинский»<br>
+              Адрес:г.Санкт-Петербург, ул.Б.Конюшенная,д.19/8<br><br>
+              Телефон:+7(495)666-02-66</p>
+          </section>
+          <section class="footer-social">
+            <p>Давайте дружить!</p>
+            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фэйсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </section>
+          <section class="footer-copyright">
+            <p>Разработано:</p>
+              <a class="btn" href="#">Htmlacademy.ru</a>
+          </section>
+        </div>
+      </footer>
+      <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">
+          Закрыть
+        </button>
+        <h2 class="modal-content-title">Личный кабинет</h2>
+        <p>Введите пожалуйста свой логин и пароль.</p>
+        <form class="login-form" action="Menistrel2005@yandex.ru" method="post">
+          <input class="icon-user" type="text" name="login" placeholder="Логин">
+          <input class="icon-password" type="password" name="password" placeholder="Пароль">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember">Запомните меня
+            <span class="checkbox-indicator"></span>
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+          <button class="btn" type="submit">Войти</button>
+        </form>
+      </div>
+      <div class="modal-overlay"></div>
+      <script>var link = document.querySelector(".login");
+      var popup = document.querySelector(".modal-content");
+      var closepopup = document.querySelector(".modal-content-close");
+      var login = popup.querySelector("[name=login]");
+      var password = popup.querySelector("[name=password]");
+      var form = popup.querySelector("form");
+      var storage = localStorage.getItem("login");
+      var overlay = document.querySelector(".modal-overlay");
+
+      link.addEventListener("click", function(event) {
+        overlay.classList.add("modal-overlay-show");
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+
+        if(storage) {
+          login.value = storage;
+          password.focus();
+        }
+        else {
+          login.focus();
+        }
+      });
+
+      closepopup.addEventListener("click", function(event) {
+        event.preventDefault();
+        overlay.classList.remove("modal-overlay-show");
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function(event) {
+        if (!login.value || !password.value) {
+          event.preventDefault();
+          popup.classList.add("modal-error");
+        }
+        else {
+          localStorage.setItem("login", login.value)
+        }
+
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27 && popup.classList.contains("modal-content-show")) {
+          overlay.classList.remove("modal-overlay-show");
+          popup.classList.remove("modal-content-show");
+          }
+      });</script>
+    </body>
+  </html>

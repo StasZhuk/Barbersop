@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="utf-8">
+      <title>Barbershop</title>
+      <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="inner-page static">
+      <header class="main-header">
+        <div class="container clearfix">
+          <nav class="main-navigation">
+            <a class="logo-inner" href="index.html"><img src="img/logo-inner.png" alt="Барбершоп Бородинский" width="111" height="22"></a>
+            <ul>
+              <li>
+                <a href="#">Информация</a>
+              </li>
+              <li>
+                <a href="#">Новости</a>
+              </li>
+              <li>
+                <a href="text.html">Прайс-лист</a>
+              </li>
+              <li>
+                <a href="barbershop-shop.html">Магазин</a>
+              </li>
+              <li>
+                <a href="adress.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="container">
+        <div class="inner-page-title">
+          <h1 class="text-title">Вход</h1>
+          <ul class="breadcrumbs">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="curent">Вход
+            </li>
+          </ul>
+        </div>
+        <div class="modal-content modal-content-show-no-js">
+          <h2 class="modal-content-title">Личный кабинет</h2>
+          <p>Введите пожалуйста свой логин и пароль.</p>
+          <form class="login-form" action="Menistrel2005@yandex.ru" method="post">
+            <input class="icon-user" type="text" name="login" placeholder="Логин">
+            <input class="icon-password" type="password" name="password" placeholder="Пароль">
+            <label class="login-checkbox">
+              <input type="checkbox" name="remember">Запомните меня
+              <span class="checkbox-indicator"></span>
+            </label>
+            <a class="restore" href="#">Я забыл пароль!</a>
+            <button class="btn" type="submit">Войти</button>
+          </form>
+        </div>
+      </main>
+      <footer class="main-footer">
+        <div class="container clearfix">
+          <section class="footer-contacts">
+            <p>
+              Барбершоп «Бородинский»<br>
+              Адрес:г.Санкт-Петербург, ул.Б.Конюшенная,д.19/8<br>
+              <a class="popup-map-show" href="adress.html">Как нас найти?</a><br>
+              Телефон:+7(495)666-02-66</p>
+          </section>
+          <section class="footer-social">
+            <p>Давайте дружить!</p>
+            <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+            <a class="social-btn social-btn-fb" href="#">Фэйсбук</a>
+            <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+          </section>
+          <section class="footer-copyright">
+            <p>Разработано:</p>
+              <a class="btn" href="#">Htmlacademy.ru</a>
+          </section>
+        </div>
+      </footer>
+      <div class="modal-content-map">
+        <button class="modal-content-close" type="button" title="Закрыть">
+          Закрыть</button>
+          <div id="yandex-map"><div>
+      </div>
+      <div class="modal-overlay"></div>
+      <script src="js/script.js"></script>
+      <script type="text/javascript" charset="utf-8" async
+      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=QbvWYi0qz6ngmMX1KQk-AIC-Tw4NTrNM&width=766&height=561&id=yandex-map&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+    </body>
+  </html>
